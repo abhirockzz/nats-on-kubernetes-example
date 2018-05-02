@@ -1,10 +1,12 @@
+## NATS on Kubernetes example
+
 This example uses [minikube](https://github.com/kubernetes/minikube)
 
 - start Kubernetes - `minikube start`
 - create NATS CRD - `kubectl apply -f https://raw.githubusercontent.com/nats-io/nats-operator/master/example/deployment.yaml`
 - check `kubectl get crd`
 
-![](images/nats-crd.jpg)
+![](images/nats-crd.JPG)
 
 - deploy cluster - `kubectl apply -f https://raw.githubusercontent.com/nats-io/nats-operator/master/example/example-nats-cluster.yaml`
 - check `kubectl get natsclusters.nats.io`
