@@ -1,0 +1,17 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: nats-pub
+spec:
+  selector:
+    matchLabels:
+      app: nats-pub
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nats-pub
+    spec:
+      containers:
+      - name: nats-pub
+        image: abhirockzz/nats-pub

@@ -1,0 +1,17 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: nats-sub
+spec:
+  selector:
+    matchLabels:
+      app: nats-sub
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nats-sub
+    spec:
+      containers:
+      - name: nats-sub
+        image: abhirockzz/nats-sub
